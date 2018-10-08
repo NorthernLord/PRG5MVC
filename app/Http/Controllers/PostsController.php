@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostsController extends Controller
 {
@@ -12,8 +13,16 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        // In order to get this to work input the following two lines into Git Bash
+        // I have no idea why, it just works
+
+        // composer dump-autoload
+        // php artisan config:cache
+
+        $posts = Post::all();
+
+        return view('posts.index')->with('posts', $posts);
     }
 
     /**
