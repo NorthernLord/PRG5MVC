@@ -22,22 +22,22 @@
                                 <th>Title</th>
                                 <th></th>
                                 <th></th>
-                                <th></th>
+                                {{-- <th></th> --}}
                             </tr>
                             @foreach($posts as $post)
                                 <tr>
                                     <td>{{$post->title}}</td>
                                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
-                                    <td>
+                                    {{-- <td>
                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                             <label class="btn btn-success active">
-                                                <input aria-pressed="true" type="checkbox" name="options" id="option1" autocomplete="off" checked>Enabled
+                                                <input type="checkbox" name="options" id="option1{{$post->id}}" autocomplete="off" checked>Enabled
                                             </label>
                                             <label class="btn btn-danger">
-                                                <input type="checkbox" name="options" id="option2" autocomplete="off">Disabled
+                                                <input type="checkbox" name="options" id="option2{{$post->id}}" autocomplete="off">Disabled
                                             </label>
                                         </div>
-                                    </td>
+                                    </td> --}}
                                     <td>
                                         {{Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right'])}}
                                             {{Form::hidden('_method', 'DELETE')}}
