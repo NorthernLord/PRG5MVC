@@ -28,6 +28,7 @@ class PostsController extends Controller
     {   
         // In order to get this to work input the following two lines into Git Bash
         // I have no idea why, it just works
+        
         // composer dump-autoload
         // php artisan config:cache
 
@@ -40,7 +41,9 @@ class PostsController extends Controller
         // Getting posts from the database using DB
         // $posts = DB::select('SELECT * FROM posts');
 
-        $posts = Post::orderBy('created_at','desc')->paginate(10);
+
+        // Posts get paginated after 5 posts using ->paginate(x)
+        $posts = Post::orderBy('created_at','desc')->paginate(5);
         return view('posts.index')->with('posts', $posts);
     }
 

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Admin Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -16,7 +16,7 @@
                         <a href="/posts/create" class="btn btn-primary">Create Post</a>
                         <br><br>
                     <h3>Your Blog Posts</h3>
-                    @if(count($posts) > 0)
+                    {{-- @if(count($posts) > 0)
                         <table class="table table-striped">
                             <tr>
                                 <th>Title</th>
@@ -28,7 +28,7 @@
                                 <tr>
                                     <td>{{$post->title}}</td>
                                     <td>
-                                        {{-- @if() --}}
+                                        @if()
                                         {{Form::checkbox('statusCheckbox', 'value', true, ['class' => 'form-check-input'])}}
                                     </td>
                                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
@@ -43,7 +43,7 @@
                         </table>
                     @else
                         <p>U don't have any posts yet, click the above "Create Post" button to make your first post!</p>
-                    @endif
+                    @endif --}}
                 </div>
             </div>
         </div>
