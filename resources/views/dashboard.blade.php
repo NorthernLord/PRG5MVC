@@ -21,8 +21,8 @@
                             <tr>
                                 <th>Title</th>
                                 <th>Show on webpage</th>
-                                <th></th>
-                                <th></th>
+                                <th>edit</th>
+                                <th>Delete</th>
                             </tr>
                             @foreach($posts as $post)
                                 <tr>
