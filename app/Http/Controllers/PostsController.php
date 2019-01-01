@@ -95,7 +95,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Created');
+        return redirect('/posts')->with('success', 'Post gecreëerd');
     }
 
     /**
@@ -122,7 +122,7 @@ class PostsController extends Controller
 
         // Check for user
         if(auth()->user()->id !== $post->user_id){
-            return redirect('/posts')->with('error', 'You are not allowed to edit this post');
+            return redirect('/posts')->with('error', 'U bent niet toegestaan deze post aan te passen');
         }
 
         return view('posts.edit')->with('post', $post);
@@ -165,7 +165,7 @@ class PostsController extends Controller
         }
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Updated');
+        return redirect('/posts')->with('success', 'Post geüpdatet');
     }
 
     /**
@@ -180,7 +180,7 @@ class PostsController extends Controller
 
         // Check for user
         if(auth()->user()->id !== $post->user_id){
-            return redirect('/posts')->with('error', 'You are not allowed to delete this post');
+            return redirect('/posts')->with('error', 'U bent niet toegestaan deze post te verwijderen');
         }
 
         if($post->cover_image != 'noimage.jpg'){
@@ -190,6 +190,6 @@ class PostsController extends Controller
 
         $post->delete();
 
-        return redirect('/posts')->with('success', 'Post Deleted');
+        return redirect('/posts')->with('success', 'Post verwijderd');
     }
 }

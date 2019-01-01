@@ -7,13 +7,7 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index() {
-        $title = 'Welcome To PRG5MVC';
-        return view('pages.index')->with('title', $title);
-    }
-
-    public function about() {
-        $title = 'About Me';
-        return view('pages.about')->with('title', $title);
+        return view('pages.index');
     }
 
     public function services() {

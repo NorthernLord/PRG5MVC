@@ -11,9 +11,6 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">Over mij</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/services">Services</a>
                     </li>
                     <li class="nav-item">
@@ -30,7 +27,7 @@
                         </li>
                         <li class="nav-item">
                             @if (Route::has('register'))
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registeren') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registreren') }}</a>
                             @endif
                         </li>
                     @else
