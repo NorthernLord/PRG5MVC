@@ -19,16 +19,16 @@
                     @if(count($posts) > 0)
                         <table class="table table-striped">
                             <tr>
-                                <th>Title</th>
-                                <th>Show on webpage</th>
-                                <th>edit</th>
-                                <th>Delete</th>
+                                <th>Titel</th>
+                                <th>Geüpload op de blog</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                             @foreach($posts as $post)
                                 <tr>
                                     <td>{{$post->title}}</td>
                                     <td>
-                                        {{-- @if() --}}
+                                        @if()
                                         {{Form::checkbox('statusCheckbox', 'value', true, ['class' => 'form-check-input'])}}
                                     </td>
                                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
