@@ -41,9 +41,9 @@ class PostsController extends Controller
         // Getting posts from the database using DB
         // $posts = DB::select('SELECT * FROM posts');
 
-
         // Posts get paginated after 5 posts using ->paginate(x)
-        $posts = Post::orderBy('created_at','desc')->paginate(5);
+        // $posts = Post::where('status', 1)->get();
+        $posts = Post::where('status','1')->orderBy('created_at', 'desc')->paginate(5);
         return view('posts.index')->with('posts', $posts);
     }
 
@@ -92,6 +92,9 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        if (!empty($_POST['statusCheckbox'])) {
+            $post->status =$request->input('statusCheckbox');
+        }
         $post->cover_image = $fileNameToStore;
         $post->save();
 
@@ -169,6 +172,28 @@ class PostsController extends Controller
     }
 
     /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+    public function updateCheckbox(Request $id)
+    {   
+        $post = Post::find($id)->first();
+        if (empty($_POST['statusCheckbox'])) {
+            $post->status = $request->input('statusCheckbox');
+        }
+        else {
+            $post->status = $request->input('statusCheckbox');
+        }
+        $post->save();
+
+        return redirect('/dashboard')->with('success', 'Post geüpdatet');
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -190,6 +215,6 @@ class PostsController extends Controller
 
         $post->delete();
 
-        return redirect('/posts')->with('success', 'Post verwijderd');
+        return redirect('/dashboard')->with('success', 'Post verwijderd');
     }
 }

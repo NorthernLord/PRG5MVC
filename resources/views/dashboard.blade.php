@@ -17,10 +17,11 @@
                         <br><br>
                     <h3>Your Blog Posts</h3>
                     @if(count($posts) > 0)
+                        {!! Form::open(['action' => 'PostsController@store']) !!}
                         <table class="table table-striped">
                             <tr>
                                 <th>Titel</th>
-                                <th>Geüpload op de blog</th>
+                                <th>Uploaden naar blog</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -28,8 +29,13 @@
                                 <tr>
                                     <td>{{$post->title}}</td>
                                     <td>
-                                        @if()
-                                        {{Form::checkbox('statusCheckbox', 'value', true, ['class' => 'form-check-input'])}}
+                                        {{Form::open(['action' => ['PostsController@updateCheckbox', $post->id], 'method' => 'POST'])}}
+                                            @if($post->status === 1)
+                                            {{Form::checkbox('statusCheckbox', '0', true, ['class' => 'form-check-input', 'onchange' => 'this.form.submit()'])}}
+                                            @else
+                                            {{Form::checkbox('statusCheckbox', '1', false, ['class' => 'form-check-input', 'onchange' => 'this.form.submit()'])}}
+                                            @endif
+                                        {!! Form::close() !!}
                                     </td>
                                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
                                     <td>

@@ -5,15 +5,19 @@
     <a href="/posts" class="btn btn-primary">Back</a>
     <br><br>
 
-    <h1>Create Post</h1>
+    <h1>Post Creëren</h1>
     {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
         <div class="form-group">
-            {{Form::label('title', 'Title')}}
-            {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
+            {{Form::label('title', 'Titel')}}
+            {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Titel'])}}
         </div>
         <div class="form-group">
-            {{Form::label('body', 'Body')}}
-            {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Body Text'])}}
+            {{Form::label('body', 'Tekst')}}
+            {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Tekst'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('statusCheckbox', 'Uploaden naar blog')}}
+            {{Form::checkbox('statusCheckbox', '1', false, ['class' => ''])}}
         </div>
         <div class="form-group">
             {{Form::file('cover_image')}}

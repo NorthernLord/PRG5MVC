@@ -5,7 +5,9 @@
     <div class="jumbotron text-center">
         <h1>Berend Kalberg</h1>
         <p>Op deze website is al mijn werk te vinden, hieronder staan een aantal uitgelichte projecten.</p>
-        <p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/register" role="button">Register</a></p>
+        @guest
+            <p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/register" role="button">Register</a></p>
+        @endguest
     </div>
 
     <!-- Page Content -->
@@ -13,7 +15,7 @@
 
         <!-- Page Heading -->
         <h1 class="my-4">Uitgelichte projecten</h1>
-  
+        <hr>
         <!-- Project One -->
         <div class="row">
             <div class="col-md-7">
