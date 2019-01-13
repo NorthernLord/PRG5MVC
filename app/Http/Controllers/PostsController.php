@@ -171,23 +171,23 @@ class PostsController extends Controller
         return redirect('/posts')->with('success', 'Post geüpdatet');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-
-    public function updateCheckbox(Request $id)
+    public function updateCheckbox(Request $request, $id)
     {   
-        $post = Post::find($id)->first();
-        if (empty($_POST['statusCheckbox'])) {
+        // $this->validate($request, [
+        //     'title' => 'required',
+        //     'body' => 'required'
+        // ]);
+
+        $post = Post::find($id);
+        // $post->title = $request->input('title');
+        // $post->body = $request->input('body');
+        if (!empty($_POST['statusCheckbox'])) {
             $post->status = $request->input('statusCheckbox');
         }
         else {
-            $post->status = $request->input('statusCheckbox');
+            $post->status = $request='0';
         }
+
         $post->save();
 
         return redirect('/dashboard')->with('success', 'Post geüpdatet');

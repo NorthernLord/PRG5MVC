@@ -29,7 +29,7 @@
                                 <tr>
                                     <td>{{$post->title}}</td>
                                     <td>
-                                        {{Form::open(['action' => ['PostsController@updateCheckbox', $post->id], 'method' => 'POST'])}}
+                                        {{Form::open(['action' => ['PostsController@updateCheckbox', $post->id, 'enctype' => 'multipart/form-data'], 'method' => 'POST'])}}
                                             @if($post->status === 1)
                                             {{Form::checkbox('statusCheckbox', '0', true, ['class' => 'form-check-input', 'onchange' => 'this.form.submit()'])}}
                                             @else
