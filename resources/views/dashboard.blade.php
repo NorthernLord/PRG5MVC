@@ -13,15 +13,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <a href="/posts/create" class="btn btn-primary">Create Post</a>
+                        <a href="/posts/create" class="btn btn-primary">Blogpost schrijven</a>
                         <br><br>
-                    <h3>Your Blog Posts</h3>
+                    <h3>Jouw blog posts</h3>
                     @if(count($posts) > 0)
                         {{-- {{Form::open(['action' => 'PostsController@store'])}} --}}
                         <table class="table table-striped">
                             <tr>
                                 <th>Titel</th>
-                                <th>Uploaden naar blog</th>
+                                <th>Gepubliceerd</th>
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -37,11 +37,11 @@
                                             @endif
                                         {{Form::close()}}
                                     </td>
-                                    <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
+                                    <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Aanpassen</a></td>
                                     <td>
                                         {{Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right'])}}
                                             {{Form::hidden('_method', 'DELETE')}}
-                                            {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                                            {{Form::submit('Verwijderen', ['class' => 'btn btn-danger'])}}
                                         {{Form::close()}}
                                     </td>
                                 </tr>

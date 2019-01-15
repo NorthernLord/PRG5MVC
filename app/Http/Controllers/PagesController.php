@@ -17,4 +17,8 @@ class PagesController extends Controller
         );
         return view('pages.services')->with($data);
     }
+
+    public function portfolio() {
+        return view('pages.portfolio');
+    }
 }

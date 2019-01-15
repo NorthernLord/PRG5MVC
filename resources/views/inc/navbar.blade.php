@@ -14,6 +14,9 @@
                         <a class="nav-link" href="/services">Services</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/posts">Blog</a>
                     </li>
                 </ul>
@@ -39,8 +42,8 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/dashboard">Dashboard</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
                                     {{ __('Uitloggen') }}
                                 </a>
 

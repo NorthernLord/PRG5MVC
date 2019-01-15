@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="/posts/create" class="btn btn-primary">Create post</a>
+    <a href="/posts/create" class="btn btn-primary">Blogpost Schrijven</a>
     <br><br>
 
-    <h1>Posts</h1>
+    <h1>Blogposts</h1>
     
     @if(count($posts) > 0)
         @foreach($posts as $post)
@@ -20,7 +20,7 @@
                         </div>
                         <hr>
                         <div>
-                            <small>Posted on {{$post->created_at}} by <span class="text-primary">{{$post->user->name}}</span></small>
+                            <small>Geplaatst op {{$post->created_at}} door: <span class="text-primary">{{$post->user->name}}</span></small>
                         </div>
                     </div>
                 </div>
@@ -29,6 +29,6 @@
         @endforeach
         {{$posts->links()}}
     @else
-        <p>No posts found</p>
+        <p>Geen blogposts gevonden</p>
     @endif
 @endsection

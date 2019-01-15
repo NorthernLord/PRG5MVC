@@ -98,7 +98,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post gecreëerd');
+        return redirect('/posts')->with('success', 'Blogpost gecreëerd');
     }
 
     /**
@@ -125,7 +125,7 @@ class PostsController extends Controller
 
         // Check for user
         if(auth()->user()->id !== $post->user_id){
-            return redirect('/posts')->with('error', 'U bent niet toegestaan deze post aan te passen');
+            return redirect('/posts')->with('error', 'U bent niet toegestaan deze blogpost aan te passen');
         }
 
         return view('posts.edit')->with('post', $post);
@@ -168,7 +168,7 @@ class PostsController extends Controller
         }
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post geüpdatet');
+        return redirect('/posts')->with('success', 'Blogpost geüpdatet');
     }
 
     public function updateCheckbox(Request $request, $id)
@@ -190,7 +190,7 @@ class PostsController extends Controller
 
         $post->save();
 
-        return redirect('/dashboard')->with('success', 'Post geüpdatet');
+        return redirect('/dashboard')->with('success', 'Blogpost geüpdatet');
     }
 
     /**
@@ -205,7 +205,7 @@ class PostsController extends Controller
 
         // Check for user
         if(auth()->user()->id !== $post->user_id){
-            return redirect('/posts')->with('error', 'U bent niet toegestaan deze post te verwijderen');
+            return redirect('/posts')->with('error', 'U bent niet toegestaan deze blogpost te verwijderen');
         }
 
         if($post->cover_image != 'noimage.jpg'){
@@ -215,6 +215,6 @@ class PostsController extends Controller
 
         $post->delete();
 
-        return redirect('/dashboard')->with('success', 'Post verwijderd');
+        return redirect('/dashboard')->with('success', 'Blogpost verwijderd');
     }
 }

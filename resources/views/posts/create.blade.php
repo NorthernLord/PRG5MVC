@@ -2,7 +2,7 @@
 
 @section('content')
     <br>
-    <a href="/posts" class="btn btn-primary">Back</a>
+    <a href="/posts" class="btn btn-primary">Terug</a>
     <br><br>
 
     <h1>Post Creëren</h1>
@@ -16,12 +16,12 @@
             {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Tekst'])}}
         </div>
         <div class="form-group">
-            {{Form::label('statusCheckbox', 'Uploaden naar blog')}}
+            {{Form::label('statusCheckbox', 'Publiceren')}}
             {{Form::checkbox('statusCheckbox', '1', false, ['class' => ''])}}
         </div>
         <div class="form-group">
             {{Form::file('cover_image')}}
         </div>
-        {{Form::Submit('Submit', ['class' => 'btn btn-primary'])}}
+        {{Form::Submit('Opslaan', ['class' => 'btn btn-primary'])}}
     {!! Form::close() !!}
 @endsection

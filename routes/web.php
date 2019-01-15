@@ -19,6 +19,7 @@ use App\Http\Controllers\PostsController;
 
 Route::get('/', 'PagesController@index');
 Route::get('/services', 'PagesController@services');
+Route::get('/portfolio', 'PagesController@portfolio');
 
 Route::post('posts/updateCheckbox{id}', ['as' => 'posts.updateCheckbox', 'uses' => 'PostsController@updateCheckbox']);
 

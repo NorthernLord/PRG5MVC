@@ -2,10 +2,10 @@
 
 @section('content')
     <br>
-    <a href="/posts" class="btn btn-primary">Back</a>
+    <a href="/posts" class="btn btn-primary">Terug</a>
     <br><br>
 
-    <h1>Edit Post</h1>
+    <h1>Blogpost aanpassen</h1>
     {{Form::open(['action' => ['PostsController@update', $post->id],'method' => 'POST', 'enctype' => 'multipart/form-data'])}}
         <div class="form-group">
             {{Form::label('title', 'Title')}}
@@ -22,7 +22,7 @@
             {{Form::hidden('_method', 'PUT')}}
         </div>
         <div>
-            {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+            {{Form::submit('Opslaan', ['class' => 'btn btn-primary'])}}
         </div>
     {{Form::close()}}
 @endsection
