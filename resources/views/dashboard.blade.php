@@ -17,7 +17,7 @@
                         <br><br>
                     <h3>Your Blog Posts</h3>
                     @if(count($posts) > 0)
-                        {!! Form::open(['action' => 'PostsController@store']) !!}
+                        {{-- {{Form::open(['action' => 'PostsController@store'])}} --}}
                         <table class="table table-striped">
                             <tr>
                                 <th>Titel</th>
@@ -35,7 +35,7 @@
                                             @else
                                             {{Form::checkbox('statusCheckbox', '1', false, ['class' => 'form-check-input', 'onchange' => 'this.form.submit()'])}}
                                             @endif
-                                        {!! Form::close() !!}
+                                        {{Form::close()}}
                                     </td>
                                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
                                     <td>
@@ -47,6 +47,7 @@
                                 </tr>
                             @endforeach
                         </table>
+                        {{-- {{Form::close()}} --}}
                     @else
                         <p>U don't have any posts yet, click the above "Create Post" button to make your first post!</p>
                     @endif
