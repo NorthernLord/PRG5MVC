@@ -19,7 +19,7 @@
         <!-- Project One -->
         <div class="row">
             <div class="col-md-7">
-                <a href="#">
+                <a>
                     <img class="img-fluid rounded mb-3 mb-md-0" src="storage/portfolio_cover_images/fietsenmakerij_homepage.png" alt="">
                 </a>
             </div>
@@ -35,10 +35,11 @@
             </div>
         </div>
         <hr>
+
         <!-- Project Two -->
         <div class="row">
             <div class="col-md-7">
-                <a href="#">
+                <a>
                 <img class="img-fluid rounded mb-3 mb-md-0" src="storage/portfolio_cover_images/grotekerkplein_homepage.png" alt="">
                 </a>
             </div>
