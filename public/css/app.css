@@ -10466,9 +10466,21 @@ a.text-dark:focus {
   }
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.form-check-input {
+  margin-left: 2rem;
+}
+
+.table th {
+  padding: 5px;
+}
+
+.table td {
+  padding: 5px;
 }
 

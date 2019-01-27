@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-7">
                 <a href="#">
-                    <img class="img-fluid rounded mb-3 mb-md-0" src="storage/portfolio_cover_images/fietsenmakerij_homepage.jpg" alt="">
+                    <img class="img-fluid rounded mb-3 mb-md-0" src="storage/portfolio_cover_images/fietsenmakerij_homepage.png" alt="">
                 </a>
             </div>
             <div class="col-md-5">
@@ -57,16 +57,4 @@
         <hr>
     </div>
 
-@endsection
-
-@section('footer')
-
-    <footer class="page-footer font-small bg-dark">
-
-        <div class="footer-copyright text-center py-3">
-            <span class="text-light">© 2019 Copyright:</span>
-            <a href="https://berendkalberg.me"> Berend Kalberg</a>
-        </div>
-    
-    </footer
 @endsection
