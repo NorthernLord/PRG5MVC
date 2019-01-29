@@ -30,9 +30,9 @@
                                         <td>
                                             {{Form::open(['action' => ['PostsController@updateCheckbox', $post->id, 'enctype' => 'multipart/form-data'], 'method' => 'POST'])}}
                                                 @if($post->status === 1)
-                                                {{Form::checkbox('statusCheckbox', '0', true, ['class' => 'form-check-input', 'onchange' => 'this.form.submit()'])}}
+                                                {{Form::checkbox('statusCheckbox', '0', true, ['class' => 'form-check-input dashboard-box', 'onchange' => 'this.form.submit()'])}}
                                                 @else
-                                                {{Form::checkbox('statusCheckbox', '1', false, ['class' => 'form-check-input', 'onchange' => 'this.form.submit()'])}}
+                                                {{Form::checkbox('statusCheckbox', '1', false, ['class' => 'form-check-input dashboard-box', 'onchange' => 'this.form.submit()'])}}
                                                 @endif
                                             {{Form::close()}}
                                         </td>

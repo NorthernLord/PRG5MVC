@@ -3,8 +3,7 @@
 @section('content')
 
     <div class="jumbotron text-center">
-        <h1>Berend Kalberg</h1>
-        <p>Op deze website is al mijn werk te vinden, hieronder staan een aantal uitgelichte projecten.</p>
+        <h1>UI/UX Design, Development, Deployment</h1>
         @guest
             <p><a class="btn btn-primary btn-lg" href="/login" role="button">Inloggen</a> <a class="btn btn-success btn-lg" href="/register" role="button">Registreren</a></p>
         @endguest
@@ -52,7 +51,7 @@
                     Er is een project neergezet waardoor er levend pong gespeeld kon worden op het Grotekerkplein en dit kon op de website live bekeken worden via Twitch.
                     Wat ook op de website bekeken kon worden waren de evenementen die georganiseerd werden door de gemeente. Deze werden live gehaald via een api.
                 </p>
-                <a class="btn btn-primary" href="https://stud.hosted.hr.nl/0944889/grotekerkplein/">Project bekijken</a>
+                <a class="btn btn-primary" href="https://stud.hosted.hr.nl/0944889/grotekerkplein/" target="_blank">Project bekijken</a>
             </div>
         </div>
         <hr>
