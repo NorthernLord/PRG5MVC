@@ -16,6 +16,14 @@
             {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Tekst'])}}
         </div>
         <div class="form-group">
+            {{ Form::label('category_id', 'Categorie:') }}
+            <select class="form-control" name="category_id">
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             {{Form::label('statusCheckbox', 'Publiceren')}}
             {{Form::checkbox('statusCheckbox', '1', false, ['class' => ''])}}
         </div>

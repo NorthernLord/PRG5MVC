@@ -13,7 +13,10 @@
             <a href="/posts/create" class="btn btn-primary">Blogpost schrijven</a>
             <a href="/posts/create" class="btn btn-primary">Blogposts</a>
             <a href="/posts/create" class="btn btn-primary">Gebruikers</a>
+            <a class="btn btn-primary" href=" {{route('categories.index')}}">Categorieën</a>
+
             <br><br>
+
             <h3>Jouw blog posts</h3>
             @if(count($posts) > 0)
                 <table class="table table-sm">

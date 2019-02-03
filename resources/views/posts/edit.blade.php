@@ -16,6 +16,10 @@
             {{Form::textarea('body', $post->body, ['class' => 'form-control', 'placeholder' => 'Body Text'])}}
         </div>
         <div class="form-group">
+            {{ Form::label('category_id', 'Categorie:') }}
+            {{ Form::select('category_id', $categories, $post->category_id, ['class' => 'form-control']) }}
+        </div>
+        <div class="form-group">
             {{Form::file('cover_image')}}
         </div>
         <div>

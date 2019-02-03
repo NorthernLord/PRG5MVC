@@ -5,26 +5,26 @@
 
     <br><br>
 
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categorie
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+    <h1>Blogposts</h1>
+
+    <br>
+
+    <div class="widget">
+        <div class="widget-heading">
+            <h4>Categorieën:</h4>
+        </div>
+        <div class="widget-body">
+            <ul class="categories">
+                @foreach ($categories as $category)
+                <li>
+                <a href=" {{ route('category', $category->id) }}">{{ $category->name }}</a>
+                </li>
+                @endforeach
+            </ul>
         </div>
     </div>
 
     <br><br>
-
-    <h1>Blogposts</h1>
-
-    {{-- @foreach ($categories as $category) {
-        {{ $category }}
-    }
-        
-    @endforeach --}}
     
     @if(count($posts) > 0)
         @foreach($posts as $post)
@@ -41,6 +41,8 @@
                         <hr>
                         <div>
                             <small>Geplaatst op {{$post->created_at}} door: <span class="text-primary">{{$post->user->name}}</span></small>
+                            <br>
+                            <small>Categorie: <span class="text-primary">{{ $post->category->name }}</span></small>
                         </div>
                     </div>
                 </div>

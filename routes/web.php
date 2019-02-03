@@ -13,18 +13,25 @@ use App\Http\Controllers\PostsController;
 |
 */
 
-// Route::get('/users/{id}/{name}', function($id, $name) {
-//     return 'This is user '.$id.'-'.$name;
-// });
-
+// Pages Routes
 Route::get('/', 'PagesController@index');
 Route::get('/services', 'PagesController@services');
 Route::get('/portfolio', 'PagesController@portfolio');
 
+// Posts Routes
 Route::get('/posts', 'PostsController@index');
 Route::resource('posts', 'PostsController');
 Route::post('posts/updateCheckbox{id}', ['as' => 'posts.updateCheckbox', 'uses' => 'PostsController@updateCheckbox']);
 
+// Dashboard Routes
 Route::get('/dashboard', 'DashboardController@index');
+
+// Categories Routes
+Route::resource('categories', 'CategoryController', ['except' => ['create']]);
+
+Route::get('/category/{category}', [
+    'uses' => 'PostsController@category',
+    'as' => 'category'
+]);
 
 Auth::routes();

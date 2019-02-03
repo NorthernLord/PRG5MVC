@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Category;
 use App\Post;
 use DB;
 
@@ -37,8 +38,29 @@ class PostsController extends Controller
 
         // Posts get paginated after 5 posts using ->paginate(x)
         // $posts = Post::where('status', 1)->get();
+
+        $categories = Category::with('posts')->orderBy('name', 'asc')->get();
         $posts = Post::where('status','1')->orderBy('created_at', 'desc')->paginate(5);
-        return view('posts.index', ['posts' => $posts]);
+        return view('posts.index')->withPosts($posts)->withCategories($categories);
+    }
+
+    public function category($id)
+    {
+        // $posts = Post::all();
+        // return Post::where('title', 'Post Two')->get();
+        // $posts = Post::orderBy('title','desc')->take(1)->get();
+        // $posts = Post::orderBy('title','desc')->paginate(10);
+        // $posts = Post::orderBy('title','desc')->get();
+
+        // Getting posts from the database using DB
+        // $posts = DB::select('SELECT * FROM posts');
+
+        // Posts get paginated after 5 posts using ->paginate(x)
+        // $posts = Post::where('status', 1)->get();
+
+        $categories = Category::with('posts')->orderBy('name', 'asc')->get();
+        $posts = Post::where('category_id', $id)->orderBy('created_at', 'desc')->paginate(5);
+        return view('posts.index')->withPosts($posts)->withCategories($categories);
     }
 
     /**
@@ -48,7 +70,8 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $categories = Category::all();
+        return view('posts.create')->withCategories($categories);
     }
 
     /**
@@ -60,9 +83,10 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'body' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
+            'title'         => 'required|max:255',
+            'body'          => 'required',
+            'category_id'   => 'required|integer',
+            'cover_image'   => 'image|nullable|max:1999'
         ]);
 
         // Handle file upload
@@ -86,6 +110,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        $post->category_id = $request->category_id;
         if (!empty($_POST['statusCheckbox'])) {
             $post->status =$request->input('statusCheckbox');
         }
@@ -104,7 +129,7 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        return view('posts.show')->with('post', $post);
+        return view('posts.show')->withPost($post);
     }
 
     /**
@@ -122,7 +147,14 @@ class PostsController extends Controller
             return redirect('/posts')->with('error', 'U bent niet toegestaan deze blogpost aan te passen');
         }
 
-        return view('posts.edit')->with('post', $post);
+        $categories = Category::all();
+        $cats = array();
+
+        foreach($categories as $category) {
+            $cats[$category->id] = $category->name;
+        }
+
+        return view('posts.edit')->withPost($post)->withCategories($cats);
     }
 
     /**
@@ -135,8 +167,9 @@ class PostsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'body' => 'required'
+            'title'         => 'required',
+            'body'          => 'required',
+            'category_id'   => 'required'
         ]);
 
         // Handle file upload
@@ -157,6 +190,7 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        $post->category_id = $request->input('category_id');
         if($request->hasFile('cover_image')){
             $post->cover_image = $fileNameToStore;
         }
