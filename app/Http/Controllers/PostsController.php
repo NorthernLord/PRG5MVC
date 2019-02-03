@@ -25,14 +25,8 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        // In order to get this to work input the following two lines into Git Bash
-        // I have no idea why, it just works
-        
-        // composer dump-autoload
-        // php artisan config:cache
-
-        //$posts = Post::all();
+    {
+        // $posts = Post::all();
         // return Post::where('title', 'Post Two')->get();
         // $posts = Post::orderBy('title','desc')->take(1)->get();
         // $posts = Post::orderBy('title','desc')->paginate(10);
@@ -44,7 +38,7 @@ class PostsController extends Controller
         // Posts get paginated after 5 posts using ->paginate(x)
         // $posts = Post::where('status', 1)->get();
         $posts = Post::where('status','1')->orderBy('created_at', 'desc')->paginate(5);
-        return view('posts.index')->with('posts', $posts);
+        return view('posts.index', ['posts' => $posts]);
     }
 
     /**

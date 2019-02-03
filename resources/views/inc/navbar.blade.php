@@ -1,7 +1,10 @@
 <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
+            {{-- <a class="navbar-brand" href="{{ url('/') }}">
                 Berend Kalberg
+            </a> --}}
+            <a href="{{ url('/') }}">
+                <img class="navbar-logo" src="/storage/logos/logo-sm-bracket.png" alt="Berend Kalberg">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="card">
-        <div class="card-header">Dashboard</div>
+        <div class="card-header">Admin Dashboard</div>
 
         <div class="card-body">
             @if (session('status'))
@@ -11,6 +11,8 @@
                 </div>
             @endif
             <a href="/posts/create" class="btn btn-primary">Blogpost schrijven</a>
+            <a href="/posts/create" class="btn btn-primary">Blogposts</a>
+            <a href="/posts/create" class="btn btn-primary">Gebruikers</a>
             <br><br>
             <h3>Jouw blog posts</h3>
             @if(count($posts) > 0)

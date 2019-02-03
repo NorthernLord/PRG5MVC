@@ -21,14 +21,10 @@ Route::get('/', 'PagesController@index');
 Route::get('/services', 'PagesController@services');
 Route::get('/portfolio', 'PagesController@portfolio');
 
+Route::get('/posts', 'PostsController@index');
+Route::resource('posts', 'PostsController');
 Route::post('posts/updateCheckbox{id}', ['as' => 'posts.updateCheckbox', 'uses' => 'PostsController@updateCheckbox']);
 
-Route::resource('posts', 'PostsController');
 Route::get('/dashboard', 'DashboardController@index');
-Route::get('/posts', 'PostsController@index');
 
 Auth::routes();
-
-Route::get('/admin', 'AdminController@admin')    
-    ->middleware('is_admin')    
-    ->name('admin');

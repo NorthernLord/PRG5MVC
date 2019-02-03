@@ -30,9 +30,9 @@
                 @yield('content')
             </div>
         </main>
-        {{-- <div>
+        <div>
             @include('inc.footer')
-        </div> --}}
+        </div>
     </div>
 </body>
 </html>

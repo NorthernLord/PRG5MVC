@@ -2,9 +2,29 @@
 
 @section('content')
     <a href="/posts/create" class="btn btn-primary">Blogpost Schrijven</a>
+
+    <br><br>
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categorie
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+
     <br><br>
 
     <h1>Blogposts</h1>
+
+    {{-- @foreach ($categories as $category) {
+        {{ $category }}
+    }
+        
+    @endforeach --}}
     
     @if(count($posts) > 0)
         @foreach($posts as $post)
