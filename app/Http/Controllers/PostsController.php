@@ -27,18 +27,6 @@ class PostsController extends Controller
      */
     public function index()
     {
-        // $posts = Post::all();
-        // return Post::where('title', 'Post Two')->get();
-        // $posts = Post::orderBy('title','desc')->take(1)->get();
-        // $posts = Post::orderBy('title','desc')->paginate(10);
-        // $posts = Post::orderBy('title','desc')->get();
-
-        // Getting posts from the database using DB
-        // $posts = DB::select('SELECT * FROM posts');
-
-        // Posts get paginated after 5 posts using ->paginate(x)
-        // $posts = Post::where('status', 1)->get();
-
         $categories = Category::with('posts')->orderBy('name', 'asc')->get();
         $posts = Post::where('status','1')->orderBy('created_at', 'desc')->paginate(5);
         return view('posts.index')->withPosts($posts)->withCategories($categories);
@@ -46,18 +34,6 @@ class PostsController extends Controller
 
     public function category($id)
     {
-        // $posts = Post::all();
-        // return Post::where('title', 'Post Two')->get();
-        // $posts = Post::orderBy('title','desc')->take(1)->get();
-        // $posts = Post::orderBy('title','desc')->paginate(10);
-        // $posts = Post::orderBy('title','desc')->get();
-
-        // Getting posts from the database using DB
-        // $posts = DB::select('SELECT * FROM posts');
-
-        // Posts get paginated after 5 posts using ->paginate(x)
-        // $posts = Post::where('status', 1)->get();
-
         $categories = Category::with('posts')->orderBy('name', 'asc')->get();
         $posts = Post::where('category_id', $id)->orderBy('created_at', 'desc')->paginate(5);
         return view('posts.index')->withPosts($posts)->withCategories($categories);
@@ -117,7 +93,7 @@ class PostsController extends Controller
         $post->cover_image = $fileNameToStore;
         $post->save();
 
-        return redirect('/posts')->with('success', 'Blogpost gecreëerd');
+        return redirect('/dashboard')->with('success', 'Blogpost gecreëerd');
     }
 
     /**
@@ -207,9 +183,10 @@ class PostsController extends Controller
         // ]);
 
         $post = Post::find($id);
-        // $post->title = $request->input('title');
-        // $post->body = $request->input('body');
-        if (!empty($_POST['statusCheckbox'])) {
+
+        // If checkbox is not empty
+        // Equals the status to the input of the checkbox (1)
+        if (!empty($request->input('statusCheckbox'))) {
             $post->status = $request->input('statusCheckbox');
         }
         else {
