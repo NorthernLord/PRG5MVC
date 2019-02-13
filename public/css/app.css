@@ -9564,3 +9564,15 @@ html .footer {
   margin-right: 1rem;
 }
 
+.portfolio-modal-image {
+  width: 100%;
+  height: auto;
+}
+
+.modal-dialog {
+  width: auto;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+

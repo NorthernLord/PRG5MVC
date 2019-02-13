@@ -3,7 +3,11 @@
 @section('content')
 
     <div class="jumbotron text-center">
-        <h1>UI/UX Design, Development, Deployment</h1>
+        <div class="row">
+            <div class="col"><h1>UX/UI Design</h1></div>
+            <div class="col"><h1>Development</h1></div>
+            <div class="col"><h1>Deployment</h1></div>
+        </div>
         @guest
             <p><a class="btn btn-primary btn-lg" href="/login" role="button">Inloggen</a> <a class="btn btn-success btn-lg" href="/register" role="button">Registreren</a></p>
         @endguest
@@ -15,10 +19,11 @@
         <!-- Page Heading -->
         <h1 class="my-4">Uitgelichte projecten</h1>
         <hr>
+
         <!-- Project One -->
         <div class="row">
             <div class="col-md-7">
-                <a>
+                <a data-toggle="modal" data-target="#modalProjectOne" href="">
                     <img class="img-fluid rounded mb-3 mb-md-0" src="storage/portfolio_cover_images/fietsenmakerij_homepage.png" alt="">
                 </a>
             </div>
@@ -33,13 +38,33 @@
                 <a class="btn btn-primary" href="https://stud.hosted.hr.nl/0944889/fietsenmakerij/" target="_blank">Project bekijken</a>
             </div>
         </div>
+
+        <div class="modal fade" id="modalProjectOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="portfolio-modal-image" src="storage/portfolio_cover_images/fietsenmakerij_homepage.png" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <hr>
 
         <!-- Project Two -->
         <div class="row">
             <div class="col-md-7">
-                <a>
-                <img class="img-fluid rounded mb-3 mb-md-0" src="storage/portfolio_cover_images/grotekerkplein_homepage.png" alt="">
+                <a data-toggle="modal" data-target="#modalProjectTwo" href="">
+                    <img class="img-fluid rounded mb-3 mb-md-0" src="storage/portfolio_cover_images/grotekerkplein_homepage.png" alt="">
                 </a>
             </div>
             <div class="col-md-5">
@@ -54,6 +79,26 @@
                 <a class="btn btn-primary" href="https://stud.hosted.hr.nl/0944889/grotekerkplein/" target="_blank">Project bekijken</a>
             </div>
         </div>
+
+        <div class="modal fade" id="modalProjectTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    
+                    </div>
+                    <div class="modal-footer">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <hr>
     </div>
 
