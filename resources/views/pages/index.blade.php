@@ -43,7 +43,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Fietsenmakerij</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -84,13 +84,13 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Grotekerkplein</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                    
+                        <img class="portfolio-modal-image" src="storage/portfolio_cover_images/grotekerkplein_homepage.png" alt="">
                     </div>
                     <div class="modal-footer">
                         
