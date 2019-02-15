@@ -24,8 +24,4 @@ class PagesController extends Controller
         return view('pages.portfolio');
     }
 
-    public function validation() {
-        $pathToFile = 'storage/files/ACB922EB1010A2C15BD685B769237544.txt';
-        return response()->file($pathToFile);
-    }
 }
