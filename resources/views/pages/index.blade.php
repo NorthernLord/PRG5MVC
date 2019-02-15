@@ -8,9 +8,6 @@
             <div class="col"><h1>Development</h1></div>
             <div class="col"><h1>Deployment</h1></div>
         </div>
-        @guest
-            <p><a class="btn btn-primary btn-lg" href="/login" role="button">Inloggen</a> <a class="btn btn-success btn-lg" href="/register" role="button">Registreren</a></p>
-        @endguest
     </div>
 
     <!-- Page Content -->
