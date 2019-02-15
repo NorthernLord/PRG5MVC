@@ -17,7 +17,7 @@ use App\Http\Controllers\PostsController;
 Route::get('/', 'PagesController@index');
 Route::get('/services', 'PagesController@services');
 Route::get('/portfolio', 'PagesController@portfolio');
-Route::get('/.well-known/pki-validation/', 'PagesController@validation');
+Route::get('/.well-known/pki-validation/ACB922EB1010A2C15BD685B769237544.txt', 'PagesController@validation');
 
 // Posts Routes
 Route::get('/posts', 'PostsController@index');
