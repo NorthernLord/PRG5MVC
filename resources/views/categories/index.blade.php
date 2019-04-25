@@ -12,6 +12,7 @@
                     <tr>
                         <th>#</th>
                         <th>Naam</th>
+                        <th></th>
                     </tr>
                 </thead>
 
@@ -20,6 +21,12 @@
                     <tr>
                         <th>{{ $category->id }}</th>
                         <td>{{ $category->name }}</td>
+                        <td>
+                            {{Form::open(['action' => ['CategoryController@destroy', $category->id], 'method' => 'POST', 'class' => 'float-right'])}}
+                                {{Form::hidden('_method', 'DELETE')}}
+                                {{Form::submit('Verwijderen', ['class' => 'btn btn-danger btn-sm'])}}
+                            {{Form::close()}}
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

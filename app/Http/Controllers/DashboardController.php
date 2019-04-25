@@ -23,7 +23,7 @@ class DashboardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         if (auth()->check()){
 
             if (auth()->user()->isAdmin()){
@@ -34,9 +34,9 @@ class DashboardController extends Controller
             } else {
                 $user_id = auth()->user()->id;
                 $user = User::find($user_id);
-                return view('dashboard')->with('posts', $user->posts); 
+                return view('user.dashboard')->with('posts', $user->posts);
             }
         }
-        
+
     }
 }

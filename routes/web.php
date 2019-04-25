@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,10 +29,13 @@ Route::get('/dashboard', 'DashboardController@index');
 
 // Categories Routes
 Route::resource('categories', 'CategoryController', ['except' => ['create']]);
-
 Route::get('/category/{category}', [
     'uses' => 'PostsController@category',
     'as' => 'category'
 ]);
 
-Auth::routes();
+// Authentication Routes
+Auth::routes([
+    'register' => true,
+    'verify' => false
+]);

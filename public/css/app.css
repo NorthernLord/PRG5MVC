@@ -9555,18 +9555,11 @@ html .footer {
   margin-bottom: 30px;
 }
 
-.pagination {
-  margin-bottom: 30px;
-}
-
-.navbar-logo {
-  width: 200px;
-  margin-right: 1rem;
-}
-
 .portfolio-modal-image {
-  width: 100%;
+  width: 80%;
   height: auto;
+  display: flex;
+  margin: auto;
 }
 
 .modal-dialog {
@@ -9574,5 +9567,24 @@ html .footer {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+}
+
+.pagination {
+  margin-bottom: 30px;
+}
+
+#navbar {
+  transition: 0.4s;
+}
+
+.navbar-logo {
+  width: 200px;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 5px 10px 5px 10px !important;
+  }
 }
 

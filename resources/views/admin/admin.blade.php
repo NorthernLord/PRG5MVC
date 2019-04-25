@@ -10,10 +10,12 @@
                     {{ session('status') }}
                 </div>
             @endif
+
             <a href="/posts/create" class="btn btn-primary">Blogpost schrijven</a>
-            <a href="/posts/create" class="btn btn-primary">Blogposts</a>
-            <a href="/posts/create" class="btn btn-primary">Gebruikers</a>
-            <a class="btn btn-primary" href=" {{route('categories.index')}}">Categorieën</a>
+            <a href="/dashboard/posts" class="btn btn-primary">Blogposts</a>
+            <a href="/dashboard/users" class="btn btn-primary">Gebruikers</a>
+            <a href="/dashboard/register" class="btn btn-primary">Registeren</a>
+            <a href="/categories" class="btn btn-primary">Categorieën</a>
 
             <br><br>
 
