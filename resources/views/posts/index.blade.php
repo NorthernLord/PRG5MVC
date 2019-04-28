@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.container')
 
 @section('content')
     <a href="/posts/create" class="btn btn-primary">Blogpost Schrijven</a>
@@ -25,7 +25,7 @@
     </div>
 
     <br><br>
-    
+
     @if(count($posts) > 0)
         @foreach($posts as $post)
             <div class="card bg-light">

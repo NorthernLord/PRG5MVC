@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.container')
 
 @section('title', '| All Categories')
-    
+
 @section('content')
 
     <div class="row">
@@ -43,7 +43,7 @@
                     <br>
 
                     {{ Form::submit('Nieuwe categorie', ['class' => 'btn btn-primary']) }}
-                
+
                 {!! Form::close() !!}
             </div>
         </div>

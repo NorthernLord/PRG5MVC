@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.container')
 
 @section('content')
     <div class="card">
@@ -14,7 +14,7 @@
             <a class="btn btn-primary" href=" {{route('categories.index')}}">Categorieën</a>
 
             <br><br>
-            
+
             <h3>Jouw blog posts</h3>
             @if(count($posts) > 0)
                 <table class="table table-sm">
