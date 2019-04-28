@@ -14,6 +14,8 @@
     <title>Berend Kalberg - Web Developer</title>
 
     <!-- Scripts -->
+
+
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -38,5 +40,10 @@
             @include('inc.footer')
         </div>
     </div>
+
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
 </body>
 </html>

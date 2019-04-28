@@ -12,7 +12,7 @@
     <br><br>
 
     <div>
-        {{ $post->body }}
+        {!!$post->body !!}
     </div>
     <hr>
     <small>Geplaatst op {{ $post->created_at }} door: <span class="text-primary">{{ $post->user->name }}</span></small>

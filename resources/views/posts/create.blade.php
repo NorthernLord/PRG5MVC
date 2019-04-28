@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             {{Form::label('body', 'Tekst')}}
-            {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Tekst'])}}
+            {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Tekst', 'id' => 'article-ckeditor'])}}
         </div>
         <div class="form-group">
             {{ Form::label('category_id', 'Categorie:') }}
