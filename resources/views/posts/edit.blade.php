@@ -1,4 +1,4 @@
-@extends('layouts.container)
+@extends('layouts.container')
 
 @section('content')
     <br>
@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             {{Form::label('body', 'Body')}}
-            {{Form::textarea('body', $post->body, ['class' => 'form-control', 'placeholder' => 'Body Text'])}}
+            {{Form::textarea('body', $post->body, ['class' => 'form-control', 'placeholder' => 'Body Text', 'id' => 'article-ckeditor'])}}
         </div>
         <div class="form-group">
             {{ Form::label('category_id', 'Categorie:') }}
