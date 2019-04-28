@@ -11,7 +11,7 @@
 
     {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 
-    <title>Berend Kalberg</title>
+    <title>Berend Kalberg - Web Developer</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

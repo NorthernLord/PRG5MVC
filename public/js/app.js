@@ -34162,19 +34162,16 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // window
 // });
 
 
-console.log("This Works");
-
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("navbar").style.padding = "0px";
-  } else {
-    document.getElementById("navbar").style.padding = "10px";
-  }
-}
+console.log("JS loaded...");
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() >= 20) {
+      $(".navbar").addClass("compressed");
+    } else if ($(window).scrollTop() == 0) {
+      $(".navbar").removeClass("compressed");
+    } else {}
+  });
+});
 
 /***/ }),
 

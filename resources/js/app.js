@@ -21,16 +21,15 @@ require('./bootstrap');
 //     el: '#app'
 // });
 
-console.log("This Works")
+console.log("JS loaded...")
 
-window.onscroll = function() {
-    scrollFunction()
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("navbar").style.padding = "0px";
-    } else {
-        document.getElementById("navbar").style.padding = "10px";
-    }
-}
+$(document).ready(function() {
+    $(window).on("scroll", function() {
+        if ($(window).scrollTop() >= 20) {
+            $(".navbar").addClass("compressed");
+        }  else if ($(window).scrollTop() == 0) {
+            $(".navbar").removeClass("compressed");
+        } else {
+        }
+    });
+});

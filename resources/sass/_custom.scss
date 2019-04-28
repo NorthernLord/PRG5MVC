@@ -56,10 +56,6 @@ html {
 
 // Navbar
 
-#navbar {
-    transition: 0.4s;
-}
-
 .navbar-logo {
     width: 200px;
     margin-right: 1rem;
@@ -67,6 +63,60 @@ html {
 
 @media screen and (max-width: 580px) {
     #navbar {
-        padding: 5px 10px 5px 10px !important;
+        padding: 25px !important;
     }
+}
+
+.navbar {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: $main;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.navbar.compressed {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.icon-bar {
+	width: 22px;
+	height: 2px;
+	background-color: #B6B6B6;
+	display: block;
+	transition: all 0.4s;
+	margin-top: 4px
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent !important;
+    padding: 0;
+}
+
+.navbar-toggler .top-bar {
+    transform: translate(3px) rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggler .bottom-bar {
+    transform: translate(3px) rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
 }
