@@ -9574,13 +9574,19 @@ html .footer {
 }
 
 .navbar-logo {
-  width: 200px;
+  width: 300px;
   margin-right: 1rem;
 }
 
-@media screen and (max-width: 580px) {
-  #navbar {
-    padding: 25px !important;
+@media screen and (max-width: 990px) {
+  .navbar-logo {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-logo {
+    width: 200px;
   }
 }
 
@@ -9589,7 +9595,7 @@ html .footer {
   padding-bottom: 25px;
   background: #2c323b;
   color: #333;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .navbar.compressed {
@@ -9603,7 +9609,6 @@ html .footer {
   background-color: #B6B6B6;
   display: block;
   transition: all 0.4s;
-  margin-top: 4px;
 }
 
 .navbar-toggler {
@@ -9621,6 +9626,7 @@ html .footer {
 
 .navbar-toggler .middle-bar {
   opacity: 0;
+  margin-top: 4px;
 }
 
 .navbar-toggler .bottom-bar {
@@ -9628,6 +9634,7 @@ html .footer {
           transform: translate(3px) rotate(-45deg);
   -webkit-transform-origin: 10% 90%;
           transform-origin: 10% 90%;
+  margin-top: 4px;
 }
 
 .navbar-toggler.collapsed .top-bar {

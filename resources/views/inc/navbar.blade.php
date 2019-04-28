@@ -1,4 +1,4 @@
-<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" id="navbar">
+<nav class="navbar sticky-top navbar-expand-md navbar-dark" id="navbar">
     <div class="container">
         {{-- <a class="navbar-brand" href="{{ url('/') }}">
             Berend Kalberg

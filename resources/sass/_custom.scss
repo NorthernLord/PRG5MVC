@@ -57,22 +57,34 @@ html {
 // Navbar
 
 .navbar-logo {
-    width: 200px;
+    width: 300px;
     margin-right: 1rem;
 }
 
-@media screen and (max-width: 580px) {
-    #navbar {
-        padding: 25px !important;
+@media screen and (max-width: 990px) {
+    .navbar-logo{
+        width: 250px;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .navbar-logo{
+        width: 200px;
+    }
+}
+
+// @media screen and (max-width: 580px) {
+//     .navbar-logo{
+//         width: 150px;
+//     }
+// }
 
 .navbar {
     padding-top: 25px;
     padding-bottom: 25px;
     background: $main;
     color: #333;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .navbar.compressed {
@@ -85,8 +97,7 @@ html {
 	height: 2px;
 	background-color: #B6B6B6;
 	display: block;
-	transition: all 0.4s;
-	margin-top: 4px
+    transition: all 0.4s;
 }
 
 .navbar-toggler {
@@ -102,11 +113,14 @@ html {
 
 .navbar-toggler .middle-bar {
     opacity: 0;
+    margin-top: 4px
+
 }
 
 .navbar-toggler .bottom-bar {
     transform: translate(3px) rotate(-45deg);
     transform-origin: 10% 90%;
+    margin-top: 4px
 }
 
 .navbar-toggler.collapsed .top-bar {
