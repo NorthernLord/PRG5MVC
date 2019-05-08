@@ -14,7 +14,7 @@
         </li>
     </ul>
     <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane no-border fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             <div class="container-fluid spacing bg-1 text-center no-border">
                 <h3 class="padding-sm">Wie ben ik?<h3>
                 <img src="storage/files/profile.png" class="img-circle" alt="profile">
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane no-border fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
             <div class="container-fluid spacing bg-2 text-center">
                 <h3 class="padding-sm">Waar heb ik ervaring mee?</h3>
 
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane no-border fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="container-fluid  spacing bg-3 text-center">
                 <iframe src="/storage/files/berend_kalberg_cv.pdf" width="100%" height="1000px">
 

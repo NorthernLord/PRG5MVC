@@ -207,6 +207,12 @@ html {
     padding: 5px;
 }
 
+@media screen and (max-width: 800px) {
+    .dashboard-buttons {
+        display: grid;
+    }
+}
+
 // Portfolio
 .portfolio-item {
     margin-bottom: 30px;
@@ -367,4 +373,9 @@ html {
 
 .no-border {
     border: none !important;
+}
+
+// Posts index
+.blogpost-card {
+    background-color: $main;
 }

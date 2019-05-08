@@ -25,9 +25,9 @@ console.log("JS loaded...")
 
 $(document).ready(function() {
     $(window).on("scroll", function() {
-        if ($(window).scrollTop() > 40) {
+        if ($(window).scrollTop() >= 80) {
             $(".navbar").addClass("compressed");
-        }  else if ($(window).scrollTop() ==0) {
+        }  else if ($(window).scrollTop() == 0) {
             $(".navbar").removeClass("compressed");
         } else {
         }

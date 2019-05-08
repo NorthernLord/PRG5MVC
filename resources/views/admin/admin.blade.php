@@ -11,11 +11,14 @@
                 </div>
             @endif
 
-            <a href="/posts/create" class="btn btn-primary">Blogpost schrijven</a>
-            <a href="/dashboard/posts" class="btn btn-primary">Blogposts</a>
-            <a href="/dashboard/users" class="btn btn-primary">Gebruikers</a>
-            <a href="/dashboard/register" class="btn btn-primary">Registeren</a>
-            <a href="/categories" class="btn btn-primary">Categorieën</a>
+            <div class="container dashboard-buttons">
+                <a href="/posts/create" class="btn btn-primary">Blogpost schrijven</a>
+                <a href="/dashboard/posts" class="btn btn-primary">Blogposts</a>
+                <a href="/dashboard/users" class="btn btn-primary">Gebruikers</a>
+                <a href="/dashboard/register" class="btn btn-primary">Registeren</a>
+                <a href="/categories" class="btn btn-primary">Categorieën</a>
+            </div>
+
 
             <br><br>
 
@@ -47,7 +50,7 @@
                                 <td>
                                     {{Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right'])}}
                                         {{Form::hidden('_method', 'DELETE')}}
-                                        {{Form::submit('Verwijderen', ['class' => 'btn btn-danger btn-sm'])}}
+                                        {{Form::submit('X', ['class' => 'btn btn-danger btn-sm'])}}
                                     {{Form::close()}}
                                 </td>
                             </tr>

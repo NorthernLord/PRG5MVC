@@ -9719,6 +9719,12 @@ html .footer-copyright {
   padding: 5px;
 }
 
+@media screen and (max-width: 800px) {
+  .dashboard-buttons {
+    display: grid;
+  }
+}
+
 .portfolio-item {
   margin-bottom: 30px;
 }
@@ -9885,5 +9891,9 @@ html .footer-copyright {
 
 .no-border {
   border: none !important;
+}
+
+.blogpost-card {
+  background-color: #2c323b;
 }
 
