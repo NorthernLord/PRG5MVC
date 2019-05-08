@@ -17,7 +17,7 @@ class PostsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware('auth', ['except' => ['index', 'show', 'category']]);
     }
 
     /**
@@ -176,7 +176,7 @@ class PostsController extends Controller
     }
 
     public function updateCheckbox(Request $request, $id)
-    {   
+    {
         // $this->validate($request, [
         //     'title' => 'required',
         //     'body' => 'required'

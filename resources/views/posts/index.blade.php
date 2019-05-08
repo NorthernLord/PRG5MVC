@@ -1,9 +1,7 @@
 @extends('layouts.container')
 
 @section('content')
-    <h2>Blogposts</h2>
-
-    <br>
+    <h2 class="my-4">Blogposts</h2>
 
     <div class="widget">
         <div class="widget-heading">
@@ -13,7 +11,7 @@
             <ul class="categories">
                 @foreach ($categories as $category)
                 <li>
-                <a href=" {{ route('category', $category->id) }}">{{ $category->name }}</a>
+                <a href="{{ route('category', $category->id) }}">{{ $category->name }}</a>
                 </li>
                 @endforeach
             </ul>

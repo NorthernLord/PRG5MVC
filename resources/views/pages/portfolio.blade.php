@@ -4,9 +4,9 @@
 <!-- Page Content -->
 
     <!-- Page Heading -->
-    <h1 class="my-4">Portfolio
-        <small>Berend Kalberg</small>
-    </h1>
+    <div class="spacing header">
+        <i class="material-icons">web</i><span class="banner-text-h1 header-text">Portfolio</span>
+    </div>
 
     <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">

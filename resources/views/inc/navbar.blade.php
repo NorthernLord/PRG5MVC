@@ -25,7 +25,7 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Inloggen') }}</a>
+                        <a class="nav-link {{Request::path() == 'login' ? 'active' : 'null'}}" href="{{ route('login') }}">{{ __('Inloggen') }}</a>
                     </li>
                     {{-- <li class="nav-item">
                         @if (Route::has('register'))
