@@ -6,6 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#2c323b">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2c323b">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2c323b">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
