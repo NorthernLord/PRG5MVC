@@ -7,9 +7,9 @@
 <div class="pos-relative">
     <div class="banner"></div>
     <div class="banner-text">
-        <h2 class="banner-text-h2">Creative Media & Game Technologies Student</h2>
+        <h1 class="banner-text-h1">Creative Media & Game Technologies Student</h1>
         <hr style="background-color: white">
-        <h4 class="banner-text-h4">Een creatieve webdeveloper voor al uw benodigdheden</h4>
+        <h2 class="banner-text-h2">Probeer altijd het beste eruit te halen</h2>
     </div>
 </div>
 
@@ -17,7 +17,7 @@
     <div class="container">
 
         <!-- Page Heading -->
-        <h1 class="my-4">Uitgelichte projecten</h1>
+        <h2 class="my-4">Uitgelichte projecten</h2>
         <hr>
 
         <!-- Project One -->

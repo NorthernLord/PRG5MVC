@@ -1,7 +1,6 @@
 @extends('layouts.container')
 
 @section('content')
-    <br>
     <a href="/posts" class="btn btn-primary">Back</a>
     <br><br>
 
@@ -9,6 +8,7 @@
     @if($post->cover_image != 'noimage.jpg')
         <img style="width:100%" src="/storage/cover_images/{{ $post->cover_image }}">
     @endif
+
     <br><br>
 
     <div>

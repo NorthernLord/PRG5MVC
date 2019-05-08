@@ -1,11 +1,7 @@
 @extends('layouts.container')
 
 @section('content')
-    <a href="/posts/create" class="btn btn-primary">Blogpost Schrijven</a>
-
-    <br><br>
-
-    <h1>Blogposts</h1>
+    <h2>Blogposts</h2>
 
     <br>
 

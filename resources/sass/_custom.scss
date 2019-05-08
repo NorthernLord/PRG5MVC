@@ -1,11 +1,13 @@
-$height-footer: 60px;
-
 html {
     min-height: 100%;
     position: relative;
+    background-color: $main;
 
+    $height-footer: 60px;
     body {
         margin-bottom: $height-footer;
+        background-color: $main;
+        color: #fff;
     }
 
     .footer {
@@ -13,12 +15,33 @@ html {
         width: 100%;
         position: absolute;
         height: $height-footer;
+        background-color: $main;
     }
+
+    .footer-copyright {
+        background-color: $main;
+    }
+}
+
+// Buttons
+.btn-primary {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}
+
+// Cards
+.card {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.card-title {
+    text-align: center;
 }
 
 // Banner
 .banner {
-    min-height: 300px;
+    min-height: 400px;
     padding-bottom: 20px;
     background: url(/storage/banners/banner.png) no-repeat 50%;
     background-color: $primary;
@@ -45,14 +68,11 @@ html {
     position: relative;
 }
 
-
-@media screen and (max-width: 580px) {
-    .banner-text-h2{
-        font-size: 1.5rem;
-    }
-    .banner-text-h4 {
-        font-size: 1.5rem;
-    }
+.banner-text-h1 {
+    font-size: 2rem;
+}
+.banner-text-h2 {
+    font-size: 1.5rem;
 }
 
 // Dashboard
@@ -69,7 +89,6 @@ html {
 }
 
 // Portfolio
-
 .portfolio-item {
     margin-bottom: 30px;
 }
@@ -87,36 +106,29 @@ html {
 }
 
 // Posts
-
 .pagination {
     margin-bottom: 30px;
 }
 
 // Navbar
-
 .navbar-logo {
     width: 300px;
-    margin-right: 1rem;
 }
-
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1000px) {
     .navbar-logo{
         width: 250px;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 400px) {
     .navbar-logo{
         width: 200px;
     }
 }
 
-// @media screen and (max-width: 580px) {
-// }
-
 .navbar {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     background: $main;
     color: #333;
     transition: all 0.4s;
@@ -125,6 +137,7 @@ html {
 .navbar.compressed {
     padding-top: 10px;
     padding-bottom: 10px;
+    background: $main;
 }
 
 .icon-bar {
@@ -168,4 +181,11 @@ html {
 
 .navbar-toggler.collapsed .bottom-bar {
     transform: rotate(0);
+}
+
+
+.active {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: $primary;
 }

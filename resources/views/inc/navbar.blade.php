@@ -1,4 +1,4 @@
-<nav class="navbar sticky-top navbar-expand-md navbar-dark" id="navbar">
+<nav class="navbar sticky-top navbar-expand-sm" id="navbar">
     <div class="container">
         <a href="{{ url('/') }}">
             <img class="navbar-logo" src="/storage/logos/logo-sm-bracket.png" id="navbar-logo" alt="Berend Kalberg">
@@ -10,21 +10,18 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/posts">Blog</a>
-                </li>
-            </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                    <li class="nav-item {{Request::path() == 'over-mij' ? 'active' : 'null'}}">
+                        <a class="nav-link" href="/over-mij">Over mij</a>
+                    </li>
+                    <li class="nav-item {{Request::path() == 'portfolio' ? 'active' : 'null'}}">
+                        <a class="nav-link" href="/portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item {{Request::path() == 'posts' ? 'active' : 'null'}}">
+                        <a class="nav-link" href="/posts">Blog</a>
+                    </li>
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">

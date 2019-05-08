@@ -1,5 +1,5 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #2c323b;
 
 // Styleguide
 $main: #2c323b;
@@ -8,17 +8,15 @@ $primary: #F5830A;
 $secondary: #b62d34;
 $tertiary: #272654;
 
-
-
 // Favicon color
 $favicon: #f5830a;
 $favicon-light: #f69b3a;
 $favicon-light-light: #fac185;
 
 // Typography
-$font-family-sans-serif: "Nunito", sans-serif;
+$font-family-sans-serif: "IBM Plex Sans", sans-serif;
 $font-size-base: 1rem;
-$line-height-base: 1.6;
+$line-height-base: 1.2;
 
 // Colors
 $blue: #3490dc;
@@ -31,3 +29,13 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+
+// Breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 800px,
+    md: 800px,
+    lg: 1000px,
+    xl: 1280px
+);

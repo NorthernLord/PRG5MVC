@@ -16,7 +16,7 @@ use App\Http\Controllers\Auth\RegisterController;
 
 // Pages Routes
 Route::get('/', 'PagesController@index');
-Route::get('/services', 'PagesController@services');
+Route::get('/over-mij', 'PagesController@about');
 Route::get('/portfolio', 'PagesController@portfolio');
 
 // Posts Routes
