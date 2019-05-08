@@ -71,9 +71,9 @@
             </div>
         </div>
         <div class="tab-pane no-border fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <div class="container" style="display: inline-flex;">
+            <div class="container">
                 <div class="header spacing">
-                    <p class="banner-text-h1 header-text">
+                    <p class="banner-text-h1 header-text" style="display:inline-flex;">
                         <a href="storage/files/berend_kalberg_cv.pdf" class="button" download><i class="material-icons">cloud_download</i>Download mijn cv</a>
                     </p>
                 </div>
