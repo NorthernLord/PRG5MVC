@@ -1,5 +1,5 @@
-<nav class="navbar sticky-top navbar-expand-sm" id="navbar">
-    <div class="container">
+<nav class="navbar sticky-top navbar-expand-md" id="navbar">
+    <div class="container navbar-container">
         <a href="{{ url('/') }}">
             <img class="navbar-logo" src="/storage/logos/logo-sm-bracket.png" id="navbar-logo" alt="Berend Kalberg">
         </a>
@@ -13,25 +13,21 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
-                    <li class="nav-item {{Request::path() == 'over-mij' ? 'active' : 'null'}}">
-                        <a class="nav-link" href="/over-mij">Over mij</a>
-                    </li>
-                    <li class="nav-item {{Request::path() == 'portfolio' ? 'active' : 'null'}}">
-                        <a class="nav-link" href="/portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item {{Request::path() == 'posts' ? 'active' : 'null'}}">
-                        <a class="nav-link" href="/posts">Blog</a>
-                    </li>
+                <li class="nav-item {{Request::path() == 'over-mij' ? 'active' : 'null'}}">
+                    <a class="nav-link" href="/over-mij">Over mij</a>
+                </li>
+                <li class="nav-item {{Request::path() == 'portfolio' ? 'active' : 'null'}}">
+                    <a class="nav-link" href="/portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item {{Request::path() == 'posts' ? 'active' : 'null'}}">
+                    <a class="nav-link" href="/posts">Blog</a>
+                </li>
+
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
                         <a class="nav-link {{Request::path() == 'login' ? 'active' : 'null'}}" href="{{ route('login') }}">{{ __('Inloggen') }}</a>
                     </li>
-                    {{-- <li class="nav-item">
-                        @if (Route::has('register'))
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Registreren') }}</a>
-                        @endif
-                    </li> --}}
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

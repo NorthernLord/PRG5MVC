@@ -5,9 +5,6 @@
     <br><br>
 
     <h1>{{ $post->title }}</h1>
-    @if($post->cover_image != 'noimage.jpg')
-        <img style="width:100%" src="/storage/cover_images/{{ $post->cover_image }}">
-    @endif
 
     <br><br>
 

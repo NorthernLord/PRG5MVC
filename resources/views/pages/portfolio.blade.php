@@ -1,8 +1,8 @@
-@extends('layouts.container')
+@extends('layouts.app')
 
 @section('content')
 <!-- Page Content -->
-
+<div class="container">
     <!-- Page Heading -->
     <div class="spacing header">
         <i class="material-icons">web</i><span class="banner-text-h1 header-text">Portfolio</span>
@@ -75,5 +75,9 @@
             </div>
         </div>
         </div>
+
     </div>
+    <hr class="active" style="margin: 40px 0px 0px 0px;">
+</div>
+
 @endsection

@@ -28,6 +28,7 @@
             {{Form::checkbox('statusCheckbox', '1', false, ['class' => ''])}}
         </div>
         <div class="form-group">
+            {{ Form::label('cover_image', 'Thumbnail:') }}
             {{Form::file('cover_image')}}
         </div>
         {{Form::Submit('Opslaan', ['class' => 'btn btn-primary'])}}

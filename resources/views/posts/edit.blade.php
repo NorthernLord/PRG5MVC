@@ -8,11 +8,11 @@
     <h1>Blogpost aanpassen</h1>
     {{Form::open(['action' => ['PostsController@update', $post->id],'method' => 'POST', 'enctype' => 'multipart/form-data'])}}
         <div class="form-group">
-            {{Form::label('title', 'Title')}}
+            {{Form::label('title', 'Titel')}}
             {{Form::text('title', $post->title, ['class' => 'form-control', 'placeholder' => 'Title'])}}
         </div>
         <div class="form-group">
-            {{Form::label('body', 'Body')}}
+            {{Form::label('body', 'Tekst')}}
             {{Form::textarea('body', $post->body, ['class' => 'form-control', 'placeholder' => 'Body Text', 'id' => 'article-ckeditor'])}}
         </div>
         <div class="form-group">
@@ -20,6 +20,7 @@
             {{ Form::select('category_id', $categories, $post->category_id, ['class' => 'form-control']) }}
         </div>
         <div class="form-group">
+            {{ Form::label('cover_image', 'Thumbnail:') }}
             {{Form::file('cover_image')}}
         </div>
         <div>

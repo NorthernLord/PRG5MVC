@@ -23,17 +23,14 @@
         <section id="index-content">
 
             <!-- Page Heading -->
-            <div class="spacing header">
+            <div class="spacing header index">
                 <i class="material-icons">web</i><span class="banner-text-h1 header-text">Uitgelichte projecten</span>
             </div>
 
             <!-- Project One -->
-            <hr>
             <div class="row spacing">
                 <div class="col-md-7">
-                    <a data-toggle="modal" data-target="#modalProjectOne" href="">
-                        <img class="img-fluid mb-3 mb-md-0" src="storage/portfolio_cover_images/fietsenmakerij_homepage.png" alt="">
-                    </a>
+                    <img class="img-fluid mb-3 mb-md-0" src="storage/portfolio_cover_images/fietsenmakerij_homepage.png" alt="">
                 </div>
                 <div class="col-md-5">
                     <h3>Fietsenmakerij</h3>
@@ -47,29 +44,12 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="modalProjectOne" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Fietsenmakerij</h5>
-                        </div>
-                        <div class="modal-body">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">X</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr>
+            <hr class="active">
 
             <!-- Project Two -->
             <div class="row spacing">
                 <div class="col-md-7">
-                    <a data-toggle="modal" data-target="#modalProjectTwo" href="">
                         <img class="img-fluid mb-3 mb-md-0" src="storage/portfolio_cover_images/grotekerkplein_homepage.png" alt="">
-                    </a>
                 </div>
                 <div class="col-md-5">
                     <h3>Grotekerkplein</h3>
@@ -84,22 +64,7 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="modalProjectTwo" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Grotekerkplein</h5>
-                        </div>
-                        <div class="modal-body">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">X</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr>
+            <hr class="active">
 
         </section>
     </div>
