@@ -31,6 +31,14 @@ html {
     padding-bottom: 8vw;
 }
 
+.spacing-top {
+    padding-top: 8vw;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
 @media screen and (max-width: 1000px) {
     .spacing {
         padding-top: 10vw;
@@ -215,6 +223,10 @@ html {
 // Dashboard
 .dashboard-box {
     margin-left: 2rem;
+}
+
+.table {
+    color: #fff;
 }
 
 .table th {
@@ -437,3 +449,9 @@ input#cover_image{
     background-color: $main;
 }
 
+// Pagination
+.page-item, .page-item.page-link, .page-link, .page-item.active, .page-item.disabled, .pagination {
+    background-color: $main !important;
+    border: none;
+    margin: 0;
+}

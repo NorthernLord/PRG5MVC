@@ -12,11 +12,17 @@
             @endif
 
             <div class="container dashboard-buttons">
-                <a href="/posts/create" class="btn btn-primary">Blogpost schrijven</a>
-                <a href="/dashboard/posts" class="btn btn-primary">Blogposts</a>
-                <a href="/dashboard/users" class="btn btn-primary">Gebruikers</a>
-                <a href="/dashboard/register" class="btn btn-primary">Registeren</a>
-                <a href="/categories" class="btn btn-primary">Categorieën</a>
+                <a href="/posts/create" class="btn btn-primary">
+                    <i class="material-icons material-icons-sm no-padding">add</i>
+                </a>
+                {{-- <a href="/dashboard/posts" class="btn btn-primary">Blogposts</a> --}}
+                {{-- <a href="/dashboard/users" class="btn btn-primary">Gebruikers</a> --}}
+                <a href="/dashboard/register" class="btn btn-primary">
+                    <i class="material-icons material-icons-sm no-padding">person_add</i>
+                </a>
+                <a href="/categories" class="btn btn-primary">
+                    <i class="material-icons material-icons-sm no-padding">category</i>
+                </a>
             </div>
 
 
@@ -46,11 +52,16 @@
                                         @endif
                                     {{Form::close()}}
                                 </td>
-                                <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary btn-sm">Aanpassen</a></td>
+                                <td>
+                                    <a href="/posts/{{$post->id}}/edit" class="btn btn-primary btn-sm">
+                                        <i class="material-icons material-icons-sm no-padding">create</i>
+                                    </a>
+                                </td>
                                 <td>
                                     {{Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right'])}}
                                         {{Form::hidden('_method', 'DELETE')}}
-                                        {{Form::submit('X', ['class' => 'btn btn-danger btn-sm'])}}
+                                        {{-- {{Form::submit('X', ['class' => 'btn btn-danger btn-sm'])}} --}}
+                                        {{ Form::button('<i class="material-icons material-icons-sm no-padding" style="color: #fff">delete</i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-sm'] )  }}
                                     {{Form::close()}}
                                 </td>
                             </tr>

@@ -75,7 +75,8 @@
 
         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="container-fluid spacing cv text-center">
-                <iframe src="/storage/files/berend_kalberg_cv.pdf" download width="100%" height="1000px">
+                <h3>Waar heb ik gewerkt?<h3>
+                <iframe class="spacing-top no-border" src="/storage/files/berend_kalberg_cv.pdf" download width="100%" height="1000px">
 
                     This browser does not support PDFs. Please download the PDF to view it:
 
