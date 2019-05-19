@@ -57,9 +57,9 @@
                                     {{ __('Inloggen') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Problemen bij het inloggen?') }}
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </form>

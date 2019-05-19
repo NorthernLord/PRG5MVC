@@ -37,5 +37,6 @@ Route::get('/category/{category}', [
 // Authentication Routes
 Auth::routes([
     'register' => true,
-    'verify' => false
+    'verify' => false,
+    'reset' => false
 ]);
