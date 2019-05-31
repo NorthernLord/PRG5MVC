@@ -15,14 +15,17 @@
                 <div class="container dashboard-buttons">
                     <a href="/posts/create" class="btn btn-primary">
                         <i class="material-icons material-icons-sm no-padding">add</i>
+                        Post Aanmaken
                     </a>
                     {{-- <a href="/dashboard/posts" class="btn btn-primary">Blogposts</a> --}}
                     {{-- <a href="/dashboard/users" class="btn btn-primary">Gebruikers</a> --}}
                     <a href="/register" class="btn btn-primary">
                         <i class="material-icons material-icons-sm no-padding">person_add</i>
+                        Persoon Registreren
                     </a>
                     <a href="/categories" class="btn btn-primary">
                         <i class="material-icons material-icons-sm no-padding">category</i>
+                        Categorieën
                     </a>
                 </div>
 

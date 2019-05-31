@@ -6,11 +6,11 @@
 
     <div class="row">
         <div class="col-md-8">
-            <h1>Jou categorieën</h1>
+            <h1>Categorieën</h1>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        {{-- <th>#</th> --}}
                         <th>Naam</th>
                         <th></th>
                     </tr>
@@ -19,7 +19,7 @@
                 <tbody>
                     @foreach ($categories as $category)
                     <tr>
-                        <th>{{ $category->id }}</th>
+                        {{-- <th>{{ $category->id }}</th> --}}
                         <td>{{ $category->name }}</td>
                         <td>
                             {{Form::open(['action' => ['CategoryController@destroy', $category->id], 'method' => 'POST', 'class' => 'float-right'])}}
