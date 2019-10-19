@@ -41,11 +41,11 @@
 
     </div>
 
-    <div style="background-color: #F5830A;">
-        <div class="container">
+    <div>
+        <div>
 
             <!-- Grid row-->
-            <div class="row py-4 d-flex align-items-center">
+            <div class="d-flex align-items-center">
 
             <!-- Grid column -->
             <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">

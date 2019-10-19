@@ -22,6 +22,31 @@ html {
     }
 }
 
+a {
+    color: #FFF;
+}
+
+h1, h2, span.banner-text-h1.header-text, h3, h4, h5, h6 {
+    font-family: Rubik,Lato,lucida grande,lucida sans unicode,Tahoma,Sans-Serif;
+    font-weight: 700;
+}
+
+.spacing.col-lg-4 {
+    font-size: initial;
+    font-weight: initial;
+    font-family: sans-serif;
+    color: #FFF;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+p {
+    color: #C2C2C2;
+}
+
+.btn-primary {
+    border-radius: 1rem;
+}
+
 .spacing {
     padding-top: 8vw;
     padding-bottom: 8vw;
@@ -67,6 +92,12 @@ html {
     }
 }
 
+div.d-flex.align-items-center{
+    background: -webkit-gradient(linear,left top,right top,from(#ff8a00),to(#e52e71));
+    background: linear-gradient(to right,#ff8a00,#e52e71);
+    height: 50px;
+} 
+
 // Headers
 .material-icons {
     display: inline-flex;
@@ -74,6 +105,26 @@ html {
     color: $primary;
     font-size: 40px;
     padding-right: 15px;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
 }
 
 .location-icon {
@@ -123,10 +174,11 @@ html {
 .banner {
     min-height: 500px;
     padding-bottom: 20px;
-    background: url(/storage/banners/banner.png) no-repeat 50%;
-    background-color: $primary;
-    background-blend-mode: multiply;
+    background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.75), #100e17),
+    url(/storage/banners/banner.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.75;
 }
 
 .set-width-banner {
@@ -314,8 +366,6 @@ input#cover_image{
 // Navbar
 .dropdown-menu {
     background-color: $main;
-    border: 0;
-    min-width: 0;
 }
 
 .dropdown-item {
@@ -349,6 +399,12 @@ input#cover_image{
     background: $main;
     color: #333;
     transition: all 0.4s;
+    border: 1px solid #201c29;
+}
+
+a.nav-link {
+    color: #fff;
+    float: right;
 }
 
 .navbar.compressed {
@@ -361,7 +417,7 @@ input#cover_image{
 .icon-bar {
 	width: 22px;
 	height: 2px;
-	background-color: #B6B6B6;
+	background-color: #fff;
 	display: block;
     transition: all 0.4s;
 }

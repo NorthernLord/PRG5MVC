@@ -5,7 +5,7 @@
 <div class="container">
     <!-- Page Heading -->
     <div class="spacing header">
-        <i class="material-icons">web</i><span class="banner-text-h1 header-text">Portfolio</span>
+        <i class="material-icons">build</i><span class="banner-text-h1 header-text">Portfolio</span>
     </div>
 
     <div class="row">

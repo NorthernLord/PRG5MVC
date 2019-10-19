@@ -20,9 +20,9 @@
                 <h3 class="spacing">Wie ben ik?<h3>
                 <img src="storage/files/profile.png" class="img-circle" alt="profile">
                 <div class="row">
-                    <h6 class="spacing col-lg-4" style="margin-bottom: 0.5rem; text-align: left;">Ik ben een Creative Media & Game Technologies student aan de Hogeschool Rotterdam. Ik zit nu in mijn tweede leerjaar en ik ben op zoek naar een meewerkstage die begint in aankomend september.</h6>
-                    <h6 class="spacing col-lg-4" style="text-align: left;">Op mijn opleiding leer ik alles over het worden van een creatieve webdeveloper. Van onderzoek doen naar de doelgroep, tot het uitwerken van een back-end systeem. Het leuke hieraan is dat ik veel leer op het gebied van techniek en creatiteit.</h6>
-                    <h6 class="spacing col-lg-4" style="text-align: left;">In mijn vrije tijd vind ik het leuk om te werken aan mijn eigen project, denk hierbij aan deze website waar ik continue aan kan blijven werken. Ook vind ik het niet verkeerd om een potje te gamen als ik tijd over heb in de week.</h6>
+                    <p class="spacing col-lg-4" style="margin-bottom: 0.5rem; text-align: left;">Ik ben een Creative Media & Game Technologies student aan de Hogeschool Rotterdam. Ik zit nu in mijn tweede leerjaar en ik ben op zoek naar een meewerkstage die begint in aankomend september.</p>
+                    <p class="spacing col-lg-4" style="text-align: left;">Op mijn opleiding leer ik alles over het worden van een creatieve webdeveloper. Van onderzoek doen naar de doelgroep, tot het uitwerken van een back-end systeem. Het leuke hieraan is dat ik veel leer op het gebied van techniek en creatiteit.</p>
+                    <p class="spacing col-lg-4" style="text-align: left;">In mijn vrije tijd vind ik het leuk om te werken aan mijn eigen project, denk hierbij aan deze website waar ik continue aan kan blijven werken. Ook vind ik het niet verkeerd om een potje te gamen als ik tijd over heb in de week.</p>
                 </div>
             </div>
         </div>
